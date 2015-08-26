@@ -1,0 +1,16 @@
+  <header class="siteHeader container clearfix">
+    <h1 class="logo">{{ site.title }}</h1>
+
+    <nav class="nav-responsive nav-responsive-text">
+      <ul class="list-inline">
+          <li><a class="page-link" href="/">Home</a></li>
+          {% for page in site.pages %}
+          {% if page.title %}
+          <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+        <li><a href="https://github.com/lauraGgit/OpenCourt">Fork Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
