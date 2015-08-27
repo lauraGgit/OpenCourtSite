@@ -36,6 +36,11 @@ a {
   color: rgb(113,0,100); 
 }
 
+.siteHeader h1 a{
+  text-decoration: none;
+  color: rgb(24, 24, 24);
+}
+
 .logo {
   font-size: 22px;
   margin-bottom: 0;
@@ -48,6 +53,10 @@ a {
 
 .color-toggle {
   padding: 10px;
+}
+
+.masthead {
+  background: url("../assets/img/openbanner.png") no-repeat center center fixed;
 }
 @media (min-width: 48em) {
   .logo {
@@ -80,12 +89,12 @@ a {
 .masthead {
   background-color: #eee;
   padding: 50px 0;
-  /*background: url("/assets/openbanner.png") no-repeat center center fixed;
-*/}
+  /*background: url("/assets/openbanner.png") no-repeat center center fixed;*/
+}
 @media (min-width: 48em) {
   .masthead {
     padding: 75px 0;
-    background: url("../assets/img/openbanner.png") no-repeat center center fixed;
+    /*background: url("../assets/img/openbanner.png") no-repeat center center fixed;*/
 
 /*    &:before {
       display: block;
@@ -127,6 +136,12 @@ a {
   text-transform: uppercase;
 }
 
+.subtitle {
+  color: rgb(46, 18, 47);
+    display: inline-block;
+    padding: 10px;
+    background: rgba(204, 204, 204, 0.46);
+}
 
 
 //------------------------------------
