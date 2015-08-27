@@ -3,7 +3,7 @@
 
     <nav class="nav-responsive nav-responsive-text">
       <ul class="list-inline">
-          <li><a class="page-link" href="/">Home</a></li>
+          <li><a class="page-link" href="{{site.baseurl}}/">Home</a></li>
           {% for page in site.pages %}
           {% if page.title %}
           <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
