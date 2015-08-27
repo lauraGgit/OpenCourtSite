@@ -14,11 +14,26 @@
   transition: all .3s;
 }
 
-a, a:visited {
-  color: rgb(113,0,100); 
+a {
+      transition: all .3s;
 }
 .siteHeader {
   border-bottom: 1px solid #eee;
+  font: normal normal 1em/1.5 "source-sans-pro","Segoe UI","Myriad Pro",Helvetica,Tahoma,sans-serif;
+}
+
+.siteHeader nav a {
+    color: #52384F;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:14px;
+    font-weight: bold;
+
+}
+
+.siteHeader nav a:hover, .siteHeader nav a:hover{
+  
+  color: rgb(113,0,100); 
 }
 
 .logo {
@@ -46,6 +61,11 @@ a, a:visited {
   }
   .nav {
     float: right;
+  }
+
+  .siteHeader nav {
+    float: right;
+    margin: 18px 0;
   }
 }
 .nav li {
@@ -103,6 +123,8 @@ a, a:visited {
 .siteFooter {
   border-top: 1px solid #eee;
   padding-top: 15px;
+  font: normal normal 1em/1.5 "source-sans-pro","Segoe UI","Myriad Pro",Helvetica,Tahoma,sans-serif;
+  text-transform: uppercase;
 }
 
 
