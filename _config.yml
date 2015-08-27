@@ -2,7 +2,7 @@
 title: OpenCourt
 email: your-email@domain.com
 description: OpenCourt is an open data analysis to visualize U.S. Supreme Court citations and an advocacy project to publish SCOTUS cases in a machine readable format.
-baseurl: "/OpenCourtSite/" # the subpath of your site, e.g. /blog/
+baseurl: "/OpenCourtSite" # the subpath of your site, e.g. /blog/
 url: "http://lgerhardt.com" # the base hostname & protocol for your site
 twitter_username: la_gerhardt
 github_username:  LauraGGit
