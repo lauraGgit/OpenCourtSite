@@ -1,3 +1,10 @@
+- name: Image 2
+  url: white-edge-no_label_20_hub.png
+  description: The zoomed in center of the constellation
+  black: black-edge-no_label_hub.png
+  full: white-edge-no_label_20_hub.png
+  bkgsize: contain
+
 - name: Image 1
   url: white-edge-no_label_1k.png
   description: The whole constellation of cases
@@ -6,10 +13,5 @@
   full: white-edge-no_label_20.png
 
 
-- name: Image 2
-  url: white-edge-no_label_20_hub.png
-  description: The zoomed in center of the constellation
-  black: black-edge-no_label_hub.png
-  full: white-edge-no_label_20_hub.png
-  bkgsize: contain
+
 
