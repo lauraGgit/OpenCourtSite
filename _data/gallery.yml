@@ -1,16 +1,16 @@
-- name: Image 2
-  url: white-edge-no_label_20_hub.png
-  description: The zoomed in center of the constellation
+- name: Hub
+  url: white-no-label-edges_hub.png
+  description: The zoomed in center of the network graph of cases that actually cite one another
   black: black-edge-no_label_hub.png
-  full: white-edge-no_label_20_hub.png
+  full: white-no-label-edges_hub.png
   bkgsize: contain
 
-- name: Image 1
-  url: white-edge-no_label_1k.png
+- name: Full Universe
+  url: white-label-no-edges_1k.png
   description: The whole constellation of cases
   link: Explore the full image
   black: black-edge-no_label_1k.png
-  full: white-edge-no_label_20.png
+  full: white-no-label-edges_2k.png
 
 
 
