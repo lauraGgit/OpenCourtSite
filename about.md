@@ -20,10 +20,10 @@ Supreme Court case law often determines the de facto enforcement and meaning of 
 ##Insights from the Data & Fun Facts
 While all of this information is qualified by the previous disclaimer, a few fun facts about the data emerge.
 
--There are over 31,000 Supreme Court cases, with over 300,000 citations.
+- There are over 31,000 Supreme Court cases, with over 300,000 citations.
 
--There 7,604 that appear to have no citations. 
+- There 7,604 that appear to have no citations. 
 
--The average case is linked to 10 other cases. (See updates for graphs of citations over time)
+- The average case is linked to 10 other cases. (See updates for graphs of citations over time)
 
--The longest "ancestry" between cases is 18.
+- The longest "ancestry" between cases is 18.

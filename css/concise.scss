@@ -132,7 +132,9 @@ a {
 .siteFooter {
   border-top: 1px solid #eee;
   padding-top: 15px;
-  font: normal normal 1em/1.5 "source-sans-pro","Segoe UI","Myriad Pro",Helvetica,Tahoma,sans-serif;
+  font: "source-sans-pro","Segoe UI","Myriad Pro",Helvetica,Tahoma,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 

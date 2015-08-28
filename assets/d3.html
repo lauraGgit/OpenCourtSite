@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <style>.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text, .legend {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.legend rect {
+  fill:none;
+  stroke:black;
+  opacity:0.8;
+}
+
+</style>
+</head>
+<body>
+    <svg id="viz" width="1000" height="500"></svg>
+    <script type="text/javascript">
+
+ 
+
+     d3.csv("d3/nodes_post1880.csv", function(data) {
+        // newData = d3.filter(data)
+        // console.log(data[0]);
+var AverageCaseCitation = d3.nest()
+  .key(function(d) { return d.year_copy; })
+  .rollup(function(v) { return d3.mean(v, function(d) { return d.Out_Degree; }); })
+  .entries(data);
+
+  var AverageCites = d3.nest()
+  .key(function(d) { return d.year_copy; })
+  .rollup(function(v) { return d3.mean(v, function(d) { return d.In_Degree; }); })
+  .entries(data);
+
+  var vis = d3.select('#viz'),
+    WIDTH = 400,
+    HEIGHT = 250,
+    MARGINS = {
+      top: 20,
+      right: 20,
+      bottom: 20,
+      left: 50
+    }, 
+    xRange = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([d3.min(AverageCaseCitation, function(d) {
+      return d.key;
+    }), d3.max(AverageCaseCitation, function(d) {
+      return d.key;
+    })]),
+    yRange = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, d3.max(AverageCaseCitation, function(d) {
+      return d.values;
+    })]),
+    xAxis = d3.svg.axis()
+      .scale(xRange)
+      .tickSize(5)
+      .tickFormat(d3.format("d")),
+    yAxis = d3.svg.axis()
+      .scale(yRange)
+      .tickSize(5)
+      .orient('left')
+      .tickSubdivide(true);
+
+vis.append('svg:g')
+  .attr('class', 'x axis')
+  .attr('transform', 'translate(0,' + (HEIGHT - MARGINS.bottom) + ')')
+  .call(xAxis);
+
+vis.append('svg:g')
+  .attr('class', 'y axis')
+  .attr('transform', 'translate(' + (MARGINS.left) + ',0)')
+  .call(yAxis);
+
+  var lineFunc = d3.svg.line()
+  .x(function(d) {
+    return xRange(d.key);
+  })
+  .y(function(d) {
+    return yRange(d.values);
+  })
+  .interpolate('linear');
+
+  var lines = {"Out_Degree": {"data":AverageCaseCitation, "color": 'rgb(82, 56, 79)', "text": "Number of Citations"},
+                "In_Degree": {"data": AverageCites, "color": 'rgb(100, 200, 79)', "text": "Number of Times Cited" }};
+
+    var y_init = 40;
+
+    for (l in lines){
+        vis.append('svg:path')
+  .attr('d', lineFunc(lines[l].data))
+  .attr('stroke', lines[l].color)
+  .attr('stroke-width', 1.5)
+  .attr('fill', 'none');
+    
+    
+vis.append("line")
+    .attr("x1", 60)
+    .attr("x2", 80)
+    .attr("y1", y_init)
+    .attr("y2", y_init)
+    .attr("stroke-width", 2)
+    .attr("stroke", lines[l].color);
+
+  vis.append("text")
+    .attr("x", 85)
+    .attr("y", y_init+5)
+    .style("fill", "black")
+    .attr("class", "legend")
+    .text(lines[l].text);
+
+    y_init += 20;
+    }
+
+  // vis.append('svg:path')
+  // .attr('d', lineFunc(AverageCaseCitation))
+  // .attr('stroke', 'rgb(82, 56, 79)')
+  // .attr('stroke-width', 1.5)
+  // .attr('fill', 'none');
+
+  //   vis.append('svg:path')
+  // .attr('d', lineFunc(AverageCites))
+  // .attr('stroke', 'rgb(100, 200, 79)')
+  // .attr('stroke-width', 1.5)
+  // .attr('fill', 'none');
+
+
+
+
+});  
+
+    
+    
+    </script>
+</body>
+</html>
