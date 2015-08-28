@@ -34,7 +34,7 @@ layout: default
 <h4>{{ image.description }}</h4>
 <div class="gallery-image" style="background: url('assets/img/{{image.url}}') no-repeat center center;{% if image.bkgsize != null %} background-size: {{image.bkgsize}};{% endif %}">
   
-  <div class="color-toggle"><a class="btn btn-border img-toggle" data-image="{{image.url}}" data-color="#fff">White</a> <a class="btn bg-black img-toggle" data-image="{{image.black}}" data-color="#000">Black</a> {% if image.label != null %}<a class="btn btn-border blue img-toggle" data-image="{{image.label}}" data-color="#fff">With Case Names</a>{% endif %} {% if image.full != null %}<a href='assets/img/{{image.full}}'class="btn btn-border blue">See the full image</a>{% endif %}</div>
+  <div class="color-toggle"><a class="btn btn-border img-toggle" data-image="{{image.url}}" data-color="#fff">White</a> <a class="btn bg-black img-toggle" data-image="{{image.black}}" data-color="#000">Black</a> {% if image.label != null %}<a class="btn btn-border blue img-toggle" data-image="{{image.label}}" data-color="#fff">With Case Names</a>{% endif %} {% if image.full != null %}<a href='assets/img/{{image.full}}'class="btn btn-border blue">Full Image</a>{% endif %}</div>
 </div>
 {% endfor %}
   </div>

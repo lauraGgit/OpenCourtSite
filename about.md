@@ -22,8 +22,16 @@ While all of this information is qualified by the previous disclaimer, a few fun
 
 - There are over 31,000 Supreme Court cases, with over 300,000 citations.
 
-- There 7,604 that appear to have no citations. 
+- There are 7,604 that appear to have no citations. 
 
-- The average case is linked to 10 other cases. (See updates for graphs of citations over time)
+- The average case cites about 10 cases and are cited about 10 times as well. In the 50 past years, cases cite an average of 18 cases and are cited an average of 10 times.
 
-- The longest "ancestry" between cases is 18.
+####Number of Citations by year after 1880
+<iframe src="http://lgerhardt.com/OpenCourtSite/assets/d3.html" width="400" height="250" marginwidth="0" marginheight="0" seamless scrolling="no" frameborder="0"></iframe>
+
+
+- The longest "ancestry" between cases is 35. In this case, ancestry is analagous to the network graph term of network diameter. Whereas, the average case has an ancestry of 7.35 long.
+
+- The first volume of the Supreme Court cases were actually from the colonial court of Pennsylvania.
+
+- There is a case named after a boat called "The Three Friends." It does not appear to have an opposing party. I guess that is what you would call frenemies.
