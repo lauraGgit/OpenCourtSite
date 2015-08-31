@@ -29,7 +29,7 @@ layout: default
 
   <div class="gallery">
     <h3>The Visualizations</h3>
-    <div class="description"><p>Below are Gephi generated visualizations of all of the citations between the cases. The color of the case node (circle) is determined by the year of the case, though cases before the 1880s are not correctly colored at this point. The site of the case node is determined by the number of cases that the case links to and how many cases cite it. <p></p>Versions with case names will be available soon.  In the future, a fully interactive graph will be developed.  </p></div>
+    <div class="description"><p>Below are Gephi generated visualizations of all of the citations between the cases. The color of the case node (circle) is determined by the year of the case, though cases before the 1880s are not correctly colored at this point. The size of the case node is determined by how many cases cite it. <p></p>Versions with case names will be available soon.  In the future, a fully interactive graph will be developed.  </p></div>
 {% for image in site.data.gallery %}
 <h4>{{ image.description }}</h4>
 <div class="gallery-image" style="background: url('assets/img/{{image.url}}') no-repeat center center;{% if image.bkgsize != null %} background-size: {{image.bkgsize}};{% endif %}">
@@ -38,7 +38,7 @@ layout: default
 </div>
 {% endfor %}
   </div>
-  
+
   
   </main>
   </div>
