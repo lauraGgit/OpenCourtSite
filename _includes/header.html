@@ -1,9 +1,9 @@
   <header class="siteHeader container clearfix">
-    <h1 class="logo">{{ site.title }}</h1>
+    <h1 class="logo"><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
 
     <nav class="nav-responsive nav-responsive-text">
       <ul class="list-inline">
-          <li><a class="page-link" href="/">Home</a></li>
+          <li><a class="page-link" href="{{site.baseurl}}/">Home</a></li>
           {% for page in site.pages %}
           {% if page.title %}
           <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
@@ -13,4 +13,32 @@
       </ul>
     </nav>
   </header>
+
+<!--   <header class="siteHeader">
+  <div class="container">
+    <div class="logo">
+      <a href="http://concisecss.com/">
+        <img src="/images/logo.svg" alt="Concise Logo">
+      </a>
+    </div>
+
+    <nav class="nav-reponsive">
+      <ul class="list-inline">
+        
+          <li>
+            <a href="/get-started/">Get Started</a>
+          </li>
+        
+          <li>
+            <a href="/documentation/layout/container/">Documentation</a>
+          </li>
+        
+          <li>
+            <a href="/add-ons/">Add-Ons</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header> -->
 

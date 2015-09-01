@@ -14,8 +14,31 @@
   transition: all .3s;
 }
 
+a {
+      transition: all .3s;
+}
 .siteHeader {
   border-bottom: 1px solid #eee;
+  font: normal normal 1em/1.5 "source-sans-pro","Segoe UI","Myriad Pro",Helvetica,Tahoma,sans-serif;
+}
+
+.siteHeader nav a {
+    color: #52384F;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:14px;
+    font-weight: bold;
+
+}
+
+.siteHeader nav a:hover, .siteHeader nav a:hover{
+  
+  color: rgb(113,0,100); 
+}
+
+.siteHeader h1 a{
+  text-decoration: none;
+  color: rgb(24, 24, 24);
 }
 
 .logo {
@@ -31,6 +54,10 @@
 .color-toggle {
   padding: 10px;
 }
+
+.masthead {
+  background: url("../assets/img/openbanner.png") no-repeat center center fixed;
+}
 @media (min-width: 48em) {
   .logo {
     float: left;
@@ -43,6 +70,11 @@
   }
   .nav {
     float: right;
+  }
+
+  .siteHeader nav {
+    float: right;
+    margin: 18px 0;
   }
 }
 .nav li {
@@ -57,12 +89,12 @@
 .masthead {
   background-color: #eee;
   padding: 50px 0;
-  /*background: url("/assets/openbanner.png") no-repeat center center fixed;
-*/}
+  /*background: url("/assets/openbanner.png") no-repeat center center fixed;*/
+}
 @media (min-width: 48em) {
   .masthead {
     padding: 75px 0;
-    background: url("../assets/img/openbanner.png") no-repeat center center fixed;
+    /*background: url("../assets/img/openbanner.png") no-repeat center center fixed;*/
 
 /*    &:before {
       display: block;
@@ -100,8 +132,18 @@
 .siteFooter {
   border-top: 1px solid #eee;
   padding-top: 15px;
+  font: "source-sans-pro","Segoe UI","Myriad Pro",Helvetica,Tahoma,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
+.subtitle {
+  color: rgb(46, 18, 47);
+    display: inline-block;
+    padding: 10px;
+    background: rgba(204, 204, 204, 0.46);
+}
 
 
 //------------------------------------
